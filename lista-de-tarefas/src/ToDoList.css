@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    background: rgb(39, 0, 71);
+    color: rgb(222, 250, 253);
+    font-family: 'Roboto', sans-serif;
+}
+
+*:focus{
+    outline: none;
+}
+
+.listaTarefas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    row-gap: 10px;
+    width: 600px;
+}
+.listaTarefas img{
+    margin: auto;
+}
+
+
+button.add{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 0;
+    right: 0;
+    border-radius: 10px;
+    border: none;
+    color: rgb(39, 0, 71);;
+    background-color: rgb(222, 250, 253);
+    margin-right: 10px;
+    margin-top: 7.5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+button.add:hover{
+    background-color: rgb(39, 0, 71);
+    color:  powderblue;
+}
+button.del{
+    border-radius: 5px;
+    border: none;
+    color: rgb(39, 0, 71);;
+    background-color: rgb(222, 250, 253);
+    transition: 0.3s;
+    cursor: pointer;
+}
+button.del:hover{
+    background-color: rgb(39, 0, 71);
+    color:  rgb(222, 250, 253);
+}
+button.del-all{
+    border-radius: 10px;
+    border: 1px solid red;
+    color: rgb(255, 0, 0);
+    background: rgb(39, 0, 71);
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 13px;
+}
+button.del-all:hover{
+    background-color: rgb(255, 0, 0);
+    color: rgb(39, 0, 71);
+}
+
+h1 {
+    font-weight: 900;
+    text-align: center;
+}
+form{
+    position: relative;
+    display: flex;
+    width: 600px;
+    height: 50px;
+    margin: 30px auto;
+    margin-bottom: 60px;
+    gap: 20px;
+    
+}
+.item {
+    display: flex;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(71, 1, 128);
+    padding: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+    max-height: 200px;
+    overflow-y: auto;
+    
+    
+}
+.item span{
+    padding: 2px 22px;
+    max-width: 400px;
+}
+.item:hover{
+    background-color: rgb(108, 2, 194);
+}
+.item.completo{
+    background: #1e1f2e;
+    opacity: 0.5;
+}
+.item.completo:hover{
+    background-color: rgb(71, 1, 128);
+}
+.item.completo span{
+    color: #5b7b8f;
+    text-decoration: line-through;
+}
+.item.completo button{
+    background-color: #414363;
+    color: #5b7b8f;
+}   
+input{
+    display: flex;
+    width: 100%;
+    border: none;
+    background: rgb(71, 1, 128);
+    font-size: 16px;
+    border-radius: 10px;
+    padding-left: 30px;
+    color: white;
+}
+
+@media screen and (max-width: 900px){
+    form{
+        width: calc(100%-20px);
+    }
+    .listaTarefas{
+        width: calc(100%-20px);
+    }
+}
