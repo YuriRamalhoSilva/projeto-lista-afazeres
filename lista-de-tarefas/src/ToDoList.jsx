@@ -79,7 +79,7 @@ function ToDoList () {
                 {
                     lista.length < 1
                     ?
-                    <h1>\Nenhuma Tarefa Listada</h1>
+                    <h1>Nenhuma Tarefa Listada</h1>
                     :
                     <></>
                 }
